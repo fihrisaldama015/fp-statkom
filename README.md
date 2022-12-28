@@ -1,27 +1,43 @@
-# Next.js + Tailwind CSS Example
+# FP Statistika Komputasi C081
+### Sistem Rekomendasi Penerimaan Mahasiswa Baru Menggunakan Naïve Bayes Classifier Di Institut Pendidikan Indonesia 
+* 21081010110 Muhamad Fihris Aldama
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Getting Started
 
-## Deploy your own
+### Prequisite
+* Install Node.js
+<a href="https://nodejs.org/en/download/">
+Node.js Download Link
+</a>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+* Install GIT
+<a href="https://git-scm.com/downloads">
+GIT Download Link
+</a>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### How to Run This Project
+1. Clone the Repo
+  ```sh
+    git clone https://github.com/fihrisaldama015/fp-statkom.git
+  ```
+2. cd to `fp-statkom` folder
+  ```sh
+    cd ./fp-statkom
+  ```
+3. Install Required Dependencies
+  ```sh
+    npm install
+  ```
+4. Run Project
+  ```sh
+    npm run dev
+  ```
+  Expected Output
+  ```sh
+    $ npm run dev
+    > dev
+    > next dev
+ 
+    ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+  ```
+5. Open in The Local Browser > <a href="http://localhost:3000">http://localhost:3000</a>
