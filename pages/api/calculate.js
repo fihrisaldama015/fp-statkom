@@ -132,7 +132,9 @@ const calculateIPK = async ({
     R,
     hitungK,
     hitungR,
-    input: { ppkn, bindo, bing, mat },
+    input: { ppkn, bindo, bing, mat, bekerja, organisasi, jarak },
+    PKurang: KPerTotal,
+    PRekomendasi: RPerTotal,
   };
 };
 

@@ -2,6 +2,7 @@ import DataDropdown from "../../components/dataDropdown";
 import DataLabel from "../../components/dataLabel";
 import DataInput from "../../components/dataInput";
 import axios from "axios";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Demo = () => {
@@ -13,6 +14,7 @@ const Demo = () => {
   const [bekerja, setBekerja] = useState();
   const [organisasi, setOrganisasi] = useState();
   const [jarak, setJarak] = useState();
+  const router = useRouter();
 
   const convertNilai = (nilai) => {
     if (nilai < 70 && nilai >= 0) return "K";
@@ -39,7 +41,59 @@ const Demo = () => {
         body
       );
       console.log("data => ", data);
-      alert(data.prediction);
+      const { hitungK, hitungR, prediction, PRekomendasi, PKurang } = data;
+      const { ppkn, bindo, bing, mat, bekerja, organisasi, jarak } = data.K;
+      const {
+        ppkn: ppkn_R,
+        bindo: bindo_R,
+        bing: bing_R,
+        mat: mat_R,
+        bekerja: bekerja_R,
+        organisasi: organisasi_R,
+        jarak: jarak_R,
+      } = data.R;
+      const {
+        ppkn: ppkn_input,
+        bindo: bindo_input,
+        bing: bing_input,
+        mat: mat_input,
+        bekerja: bekerja_input,
+        organisasi: organisasi_input,
+        jarak: jarak_input,
+      } = data.input;
+      // alert(data.prediction);
+      router.push({
+        pathname: "/demo/calculate",
+        query: {
+          nama,
+          hitungK,
+          hitungR,
+          prediction,
+          PRekomendasi,
+          PKurang,
+          ppkn,
+          bindo,
+          bing,
+          mat,
+          bekerja,
+          organisasi,
+          jarak,
+          ppkn_R,
+          bindo_R,
+          bing_R,
+          mat_R,
+          bekerja_R,
+          organisasi_R,
+          jarak_R,
+          ppkn_input,
+          bindo_input,
+          bing_input,
+          mat_input,
+          bekerja_input,
+          organisasi_input,
+          jarak_input,
+        },
+      });
     } catch (error) {
       console.log(error?.message || error);
     }
