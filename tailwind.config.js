@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./node_modules/flowbite-react/**/*.js",
@@ -8,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      xs: "475px",
+      ...defaultTheme.screens,
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

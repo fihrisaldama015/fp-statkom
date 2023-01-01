@@ -27,17 +27,17 @@ const Calculate = () => {
     getData();
   }, [router]);
   return (
-    <div className="h-auto my-24 gap-6 flex flex-col items-center justify-center">
+    <div className="my-24 md:p-16 p-6 h-auto w-full gap-6 flex flex-col items-center justify-center">
       <h1 className="mb-6 text-4xl font-bold">
         <span className="underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600 ">
           Hasil Prediksi
         </span>
       </h1>
-      <div className="flex flex-col p-12 gap-6 bg-white shadow-md rounded-xl ring-1 ring-slate-200 justify-center items-center">
+      <div className="w-full flex flex-col sm:p-12 p-6 gap-6 bg-white shadow-md rounded-xl ring-1 ring-slate-200 justify-center xs:items-center overflow-x-auto">
         {!isLoading ? (
-          <h1>
+          <h1 className="w-full text-center">
             <span
-              className={`text-4xl font-bold py-1 px-3 shadow-md  ring-2 rounded-xl ${
+              className={`text-4xl font-bold py-1 px-3 shadow-md ring-2 rounded-xl ${
                 calculateData.prediction == "Rekomendasi"
                   ? "bg-green-100  text-green-600 shadow-green-100 ring-green-200"
                   : "bg-red-100  text-red-600 shadow-red-100 ring-red-200"
@@ -61,8 +61,8 @@ const Calculate = () => {
                 <td
                   className={`${
                     calculateData.prediction == "Kurang"
-                      ? "text-4xl font-medium text-red-600"
-                      : "text-2xl text-slate-800"
+                      ? "sm:text-4xl text-2xl font-medium text-red-600"
+                      : "sm:text-2xl text-xl text-slate-800"
                   }`}
                 >
                   {parseFloat(calculateData.hitungK).toFixed(6)}
@@ -73,8 +73,8 @@ const Calculate = () => {
                 <td
                   className={`${
                     calculateData.prediction == "Rekomendasi"
-                      ? "text-4xl font-medium text-green-600"
-                      : "text-2xl text-slate-800"
+                      ? "sm:text-4xl text-2xl font-medium text-green-600"
+                      : "sm:text-2xl text-xl text-slate-800"
                   }`}
                 >
                   {parseFloat(calculateData.hitungR).toFixed(6)}
@@ -99,7 +99,7 @@ const Calculate = () => {
         <Link href="/demo">
           <button
             type="button"
-            className="text-white bg-gradient-to-r to-sky-500 from-blue-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-bold rounded-lg text-lg px-4 py-2 text-center hover:translate-x-1 transition-all"
+            className="text-white bg-gradient-to-r to-sky-500 from-blue-500 focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-bold rounded-lg text-lg px-4 py-2 text-center hover:translate-x-1 transition-all w-full"
           >
             Hitung Data Lain
           </button>
@@ -110,9 +110,9 @@ const Calculate = () => {
           Analisis
         </span>
       </h1>
-      <div className="flex flex-col p-12 gap-6 bg-white shadow-md rounded-xl ring-1 ring-slate-200 justify-center items-center">
+      <div className="flex flex-col md:p-12 p-6 gap-6 w-full text-xs sm:text-sm md:text-md lg:text-lg bg-white shadow-md rounded-xl ring-1 ring-slate-200 justify-center overflow-x-auto">
         {!isLoading ? (
-          <table cellPadding={8}>
+          <table cellPadding={8} className="relative w-full px-12">
             <thead>
               <tr>
                 <th className="text-left">

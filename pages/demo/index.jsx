@@ -100,11 +100,11 @@ const Demo = () => {
   };
 
   return (
-    <div className="m-6 mt-16 gap-3 flex h-full w-full items-center justify-evenly overflow-scroll">
-      <h1 className="mb-4 text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-2xl lg:text-3xl dark:text-white">
+    <div className="gap-3 flex sm:flex-row flex-col h-full w-full items-center justify-evenly overflow-scroll">
+      <h1 className="mt-24 h-auto text-xl font-extrabold tracking-tight leading-none text-gray-900 md:text-2xl lg:text-3xl dark:text-white">
         IPK Prediction
       </h1>
-      <div className="flex flex-col gap-3 h-full w-1/2 pb-6 justify-center">
+      <div className="p-6 sm:p-0 flex flex-col gap-3 h-full sm:w-1/2 w-full pb-6 justify-center">
         <div className="flex w-full justify-between">
           <DataLabel>Nama</DataLabel>
           <DataInput text="Masukkan Nama" change={(value) => setNama(value)} />
