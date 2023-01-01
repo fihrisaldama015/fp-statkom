@@ -1,8 +1,11 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const Auth = () => {
   const router = useRouter();
-  router.push("/auth/login");
+  useEffect(() => {
+    router.push("/auth/login");
+  }, []);
 };
 
 export default Auth;
