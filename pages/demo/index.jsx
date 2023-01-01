@@ -36,10 +36,7 @@ const Demo = () => {
       jarak,
     };
     try {
-      const { data } = await axios.post(
-        "http://localhost:3000/api/calculate",
-        body
-      );
+      const { data } = await axios.post("/api/calculate", body);
       console.log("data => ", data);
       const { hitungK, hitungR, prediction, PRekomendasi, PKurang } = data;
       const { ppkn, bindo, bing, mat, bekerja, organisasi, jarak } = data.K;
