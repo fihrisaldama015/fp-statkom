@@ -16,10 +16,7 @@ const Login = () => {
         email,
         password,
       };
-      const { data } = await axios.post(
-        "http://localhost:3000/api/auth/signin",
-        body
-      );
+      const { data } = await axios.post("/api/auth/signin", body);
       cookieCutter.set("token", data.token);
       router.push("/dashboard");
     } catch (error) {
