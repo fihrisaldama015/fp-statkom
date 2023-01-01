@@ -203,13 +203,13 @@ const Calculate = () => {
               <tr>
                 <td>P (Rekomendasi)</td>
                 <CalculateTD colSpan={3}>
-                  7/17 = {parseFloat(calculateData.PRekomendasi).toFixed(6)}
+                  17/24 = {parseFloat(calculateData.PRekomendasi).toFixed(6)}
                 </CalculateTD>
               </tr>
               <tr>
                 <td>
-                  P (X | hasil = Layak)*
-                  <br />P (Layak)
+                  P (X | hasil = Kurang)*
+                  <br />P (Kurang)
                 </td>
                 <CalculateTD colSpan={3}>
                   {parseFloat(calculateData.ppkn).toFixed(6)}*
